@@ -34,7 +34,8 @@ if (newsletterForm)
    });
 
 }
-
+const searchInput =document.querySelector('.search-input');
+const productList =document.querrySelector('.product-list');
 if (searchInput && productList){
    searchInput.addEventListener('keyup' ,(event) =>{
       const searchTerm = event.target.value.toLowerCase();
