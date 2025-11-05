@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedido Confirmado - GameMania</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="bg-dark text-white py-3">
+    <div class="container d-flex align-items-center gap-3">
+      <img src="imgs/Logo4.png" alt="Logo GameMania" height="50">
+      <h1 class="h3 m-0">GameMania</h1>
+      <img src="imgs/Logo3.png" alt="Logo GameMania2" height="50">
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-3">
+      <div class="container d-flex justify-content-start">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="pcgamer.html">PC Gamer</a></li>
+            <li class="nav-item"><a class="nav-link" href="hardware.html">Hardware</a></li>
+            <li class="nav-item"><a class="nav-link" href="computadores.html">Computadores</a></li>
+            <li class="nav-item"><a class="nav-link" href="perifericos.html">Periféricos</a></li>
+            <li class="nav-item"><a class="nav-link" href="escritorio.html">Escritório</a></li>
+            <li class="nav-item"><a class="nav-link" href="entreoucadastrese.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="container my-5 text-center">
+    <div class="d-flex align-items-center justify-content-center mb-4">
+      <img src="imgs/pedidoconfirmado.png" alt="Pedido confirmado" style="width: 50px; margin-right: 15px;">
+      <h2 class="m-0">Pedido Confirmado!</h2>
+    </div>
+
+    <p>Obrigado por comprar com a <strong>GameMania</strong>!</p>
+    <p>Seu pedido do <strong id="nomeProduto">...</strong> foi recebido com sucesso.</p>
+
+    <div class="mt-4">
+      <p><strong>Quantidade:</strong> <span id="qtdResumo">...</span></p>
+      <p><strong>Valor total:</strong> <span id="valorResumo">...</span></p>
+      <p><strong>Previsão de entrega:</strong> 5 a 7 dias úteis</p>
+      <p><strong>Número do pedido:</strong> <span id="numeroPedido">#GM</span><span id="pedidoID"></span></p>
+    </div>
+
+    <a href="pcgamer.html" class="btn btn-primary mt-4">Voltar à loja</a>
+  </section>
+
+  <footer id="contato" class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p>
+        <img src="imgs/Address.png" alt="Ícone endereço" style="width: 20px; vertical-align: middle; margin-right: 8px;">
+        Endereço: Av. Washington Luís, 105 - Vila Matias, Santos - SP
+      </p>
+      <p>
+        <img src="imgs/Telephone.png" alt="Ícone telefone" style="width: 20px; vertical-align: middle; margin-right: 8px;">
+        (13) 9212-4291
+      </p>
+      <p>
+        <img src="imgs/Copyright.png" alt="Ícone copyright" width="17px" height="20px" style="vertical-align: middle; margin-right: 8px;">
+        GameMania - 2025 - Todos os direitos reservados
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const produto = JSON.parse(localStorage.getItem("produtoSelecionado"));
+    const pedidoID = Math.floor(Math.random() * 90000 + 10000);
+
+    if (produto) {
+      document.getElementById("nomeProduto").textContent = produto.nome;
+      document.getElementById("qtdResumo").textContent = produto.quantidade;
+      const total = produto.preco * produto.quantidade;
+      document.getElementById("valorResumo").textContent = "R$ " + total.toLocaleString('pt-BR', {minimumFractionDigits: 2});
+      document.getElementById("pedidoID").textContent = pedidoID;
+    } else {
+      document.getElementById("nomeProduto").textContent = "Produto não encontrado";
+      document.getElementById("qtdResumo").textContent = "-";
+      document.getElementById("valorResumo").textContent = "-";
+      document.getElementById("pedidoID").textContent = "00000";
+    }
+  </script>
+
+</body>
+</html>
