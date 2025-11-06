@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comprar Computador Gamer - GameMania</title>
+  <title>Comprar Ryzen 7 5800X GameMania</title>
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
@@ -40,23 +40,22 @@
   <main class="container my-5">
     <div class="row g-5">
       <div class="col-md-6 text-center">
-        <img src="imgs/pc9.png" alt="Computador Gamer" class="img-fluid" style="max-width: 100%;">
-       
+        <img src="imgs/Ryzen 75800x.png" alt="Ryzen 7 5800X" class="img-fluid" style="max-width: 100%;">
+      
       </div>
 
       <div class="col-md-6">
-        <h2>Computador Gamer</h2>
-        <p><strong>Gabinete Preto</strong>, Intel Core i7-11700, 16GB DDR4, SSD 512GB</p>
+        <h2>Ryzen 7 5800X</h2>
+        <p><strong>Ryzen 7 5800X</strong>, 12 núcleos, 24 threads, 4.8GHz</p>
         <ul class="list-unstyled">
-          <li><strong>Processador:</strong> Intel Core i7-11700</li>
-          <li><strong>Placa de Vídeo:</strong> RTX 2060</li>
-          <li><strong>Memória:</strong> 16GB DDR4</li>
-          <li><strong>Armazenamento:</strong> SSD 512GB NVMe</li>
-          <li><strong>Sistema:</strong> Windows 10</li>
-          <li><strong>Garantia:</strong> 15 meses</li>
+          <li><strong>Núcleos:</strong> 12</li>
+          <li><strong>Threads: </strong>24</stronh></li>
+          <li><strong>Velocidade Clock</strong> 3.8ghz</li>
+          <li><strong>TDP</strong> 105W</li>
+   
         </ul>
 
-        <p class="mt-3"><strong>Preço:</strong> <span class="text-success fw-bold fs-4">R$ 4.499,00</span></p>
+        <p class="mt-3"><strong>Preço:</strong> <span class="text-success fw-bold fs-4">R$ 7.499,00</span></p>
 
         <form id="formCompra" class="mt-4" novalidate>
           <div class="mb-3">
@@ -70,17 +69,17 @@
             <button type="submit" class="btn btn-success">Comprar agora</button>
             <button type="button" class="btn btn-outline-primary">Adicionar ao carrinho</button>
           </div>
-
-          <div class="mt-4">
-            <p><strong>Formas de pagamento:</strong></p>
-            <ul>
-              <li>Cartão de crédito em até 12x sem juros</li>
-              <li>Pix</li>
-              <li>Boleto bancário</li>
-            </ul>
-            <p><strong>Entrega:</strong> Frete grátis para todo o País</p>
-          </div>
         </form>
+
+        <div class="mt-4">
+          <p><strong>Formas de pagamento:</strong></p>
+          <ul>
+            <li>Cartão de crédito em até 12x sem juros</li>
+            <li>Pix</li>
+            <li>Boleto bancário</li>
+          </ul>
+          <p><strong>Entrega:</strong> Frete grátis para todo o País</p>
+        </div>
       </div>
     </div>
   </main>
@@ -102,16 +101,14 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
   <script>
     document.getElementById("formCompra").addEventListener("submit", function (e) {
       e.preventDefault();
 
       const produto = {
-        nome: "Computador Gamer",
-        preco: 4499,
-        imagem: "imgs/pc9.png",
+        nome: "AMD Ryzen 7 5800X",
+        preco: 1920,
+        imagem: "imgs/Ryzen 75800x.png",
         quantidade: parseInt(document.getElementById("quantidade").value)
       };
 
@@ -120,5 +117,6 @@
     });
   </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

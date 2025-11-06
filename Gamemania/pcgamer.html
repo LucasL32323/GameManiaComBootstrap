@@ -51,7 +51,7 @@
             <h5 class="card-title">PC Gamer RTX 3060</h5>
             <p>Intel i5, 16GB RAM, SSD 512GB</p>
             <p class="text-success fw-bold">R$ 4.999,00</p>
-            <a href="pcgamerrtx3060.html" class="btn btn-primary">Comprar</a>
+            <a href="pcgamerrtx3060.html" class="btn btn-primary">Ver Mais</a>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@
       <h5 class="card-title">PC Escritório Dual Core</h5>
       <p>Intel G6400, 8GB RAM, HD 1TB</p>
       <p class="text-success fw-bold">R$ 1.899,00</p>
-      <a href="pcdualcore.html" class="btn btn-primary">Comprar</a>
+      <a href="pcdualcore.html" class="btn btn-primary">Ver Mais</a>
     </div>
   </div>
 </div>
@@ -77,7 +77,7 @@
             <h5 class="card-title">PC Gamer Ryzen 9</h5>
             <p>Ryzen 9 5900X, 32GB RAM, SSD 1TB</p>
             <p class="text-success fw-bold">R$ 7.499,00</p>
-            <a href="Ryzen95900x.html" class="btn btn-primary">Comprar</a>
+            <a href="Ryzen95900x.html" class="btn btn-primary">Ver Mais</a>
           </div>
         </div>
       </div>
@@ -89,7 +89,7 @@
             <h5 class="card-title">PC Gamer Ryzen 5</h5>
             <p>Ryzen 5 5600G, 16GB RAM, SSD 480GB</p>
             <p class="text-success fw-bold">R$ 3.799,00</p>
-            <a href="Ryzen55600.html" class="btn btn-primary">Comprar</a>
+            <a href="Ryzen55600.html" class="btn btn-primary">Ver Mais</a>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
             <h5 class="card-title">Notebook Intel</h5>
             <p>Intel i3, 8GB RAM, SSD 256GB</p>
             <p class="text-success fw-bold">R$ 2.199,00</p>
-            <a href="NotebookIntel.html" class="btn btn-primary">Comprar</a>
+            <a href="NotebookIntel.html" class="btn btn-primary">Ver Mais</a>
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@
             <h5 class="card-title">Computador Completo</h5>
             <p>Intel i5, 8GB RAM, SSD 240GB</p>
             <p class="text-success fw-bold">R$ 2.999,00</p>
-             <a href="pccompleto.html" class="btn btn-primary">Comprar</a>
+             <a href="pccompleto.html" class="btn btn-primary">Ver Mais</a>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
             <h5 class="card-title">PC Gamer Nitro X</h5>
             <p>Ryzen 7 5700X, 32GB RAM, SSD NVMe 1TB, RTX 4070</p>
             <p class="text-success fw-bold">R$ 7.499,00</p>
-            <a href="PCGamerNitro.html" class="btn btn-primary">Comprar</a>
+            <a href="PCGamerNitro.html" class="btn btn-primary">Ver Mais</a>
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@
             <h5 class="card-title">PC Profissional Intel Core</h5>
             <p>i7-12700, 32GB DDR5, SSD 1TB + HD 2TB</p>
             <p class="text-success fw-bold">R$ 5.299,00</p>
-           <a href="pcprofissional.html" class="btn btn-primary">Comprar</a>
+           <a href="pcprofissional.html" class="btn btn-primary">Ver Mais</a>
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@
             <h5 class="card-title">Computador Gamer</h5>
             <p>Intel Core i7-11700, 16GB DDR4, SSD 512GB</p>
             <p class="text-success fw-bold">R$ 4.499,00</p>
-            <a href="ComputadorGamer.html" class="btn btn-primary">Comprar</a>
+            <a href="ComputadorGamer.html" class="btn btn-primary">Ver Mais</a>
           </div>
         </div>
       </div>
@@ -172,22 +172,7 @@
       </p>
     </div>
   </footer>
-<script>
-  document.querySelectorAll(".botao-comprar").forEach(botao => {
-    botao.addEventListener("click", () => {
-      const nome = botao.getAttribute("data-nome");
-      const preco = parseFloat(botao.getAttribute("data-preco"));
-      const imagem = botao.getAttribute("data-imagem");
 
-      const produto = { nome, preco, imagem };
-      localStorage.setItem("produtoSelecionado", JSON.stringify(produto));
-
-      const usuarioLogado = localStorage.getItem("usuarioLogado");
-      const destino = usuarioLogado ? "comprar.html" : "entreoucadastrese.html";
-      window.location.href = destino;
-    });
-  });
-</script>
 
 </body>
 </html>
